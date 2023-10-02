@@ -19,29 +19,6 @@ const ffmpeg = async (command) => {
   });
 };
 
-const deepgramTranscribe = async (filePath, file) => {
-  try {
-    //console.log(filePath, file);
-    const video = fs.readFileSync(filePath);
-    //console.log(video)
-    const response = await deepgram.transcription.preRecorded(
-      {
-        buffer: video,
-        mimetype: 'video/webm',
-      },
-      { smart_format: true, utterances: true }
-    );
-
-    const stream = fs.createWriteStream('output.vtt', { flags: 'a' });
-    //const stream = fs.createWriteStream('output.srt', { flags: 'a' })
-
-    stream.write(response.toWebVTT());
-    //  Following code herestream.write(response.toWebVTT())
-  } catch (error) {
-    console.log({ error });
-  }
-};
-
 exports.uploadVideo = catchAsync(async (req, res, next) => {
   const videoFile = req.file;
   const filePath = videoFile?.path ?? '';

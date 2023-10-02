@@ -10,7 +10,7 @@ const {
 } = require('../controllers/vidoeController');
 
 router.post('/upload', upload.single('video'), uploadVideo);
-router.get('/:id', upload.single('video'), getVideo);
-router.get('/', upload.single('video'), getVideos);
+router.get('/:id', getVideo);
+router.get('/', getVideos);
 
 module.exports = router;
