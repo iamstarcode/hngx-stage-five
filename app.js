@@ -11,6 +11,8 @@ const errorController = require('./controllers/errorController');
 
 //importing routers
 
+app.use(express.static(__dirname + '/uploads'));
+
 const vidoeRouter = require(`${__dirname}/routes/videoRoutes`);
 
 const app = express();
