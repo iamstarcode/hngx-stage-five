@@ -4,6 +4,7 @@ const rateLimit = require('express-rate-limit');
 const helmet = require('helmet');
 const xss = require('xss-clean');
 const cors = require('cors');
+const path = require('node:path');
 
 //importing utils
 const AppError = require('./utils/appError');
@@ -11,11 +12,11 @@ const errorController = require('./controllers/errorController');
 
 //importing routers
 
-app.use(express.static(__dirname + '/uploads'));
-
 const vidoeRouter = require(`${__dirname}/routes/videoRoutes`);
 
 const app = express();
+
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 app.use(cors());
 
