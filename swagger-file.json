@@ -1,0 +1,63 @@
+{
+  "openapi": "3.0.0",
+  "info": { "title": "hngx-stage-five", "version": "1.0.0" },
+  "servers": [{ "url": "https://hngx-stage-five-production.up.railway.app" }],
+  "paths": {
+    "/video": {
+      "get": {
+        "tags": ["General"],
+        "summary": "Get Vidoes",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": { "application/json": {} }
+          }
+        }
+      }
+    },
+    "/video/{id}": {
+      "get": {
+        "tags": ["General"],
+        "summary": "Get Video By Id",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": { "type": "string" },
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": { "application/json": {} }
+          }
+        }
+      }
+    },
+    "/video/upload": {
+      "post": {
+        "tags": ["General"],
+        "summary": "Upload Video",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "video": { "type": "string", "format": "binary" }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": { "application/json": {} }
+          }
+        }
+      }
+    }
+  }
+}

@@ -6,6 +6,9 @@ const xss = require('xss-clean');
 const cors = require('cors');
 const path = require('node:path');
 
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocument = require('./swagger-file.json');
+
 const AppError = require('./utils/appError');
 const errorController = require('./controllers/errorController');
 
@@ -46,6 +49,8 @@ app.use(xss());
 
 //MOUNTING THE ROUTES
 app.use(`/video/`, vidoeRouter);
+
+app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 // This middleware can only execute if the above two where not executed, hence it is a better way to handle errors
 // no need to call next though
