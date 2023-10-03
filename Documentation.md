@@ -15,7 +15,7 @@
 ### Method: GET
 
 > ```
-> https://hngx-stage-five-production.up.railway.app/video/5
+> https://hngx-stage-five-production.up.railway.app/video/6
 > ```
 
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
@@ -25,14 +25,14 @@
 ### Method: POST
 
 > ```
-> https://hngx-stage-five-production.up.railway.app/video
+> https://hngx-stage-five-production.up.railway.app/video/upload
 > ```
 
 ### Body formdata
 
-| Param | value     | Type |
-| ----- | --------- | ---- |
-| file  | undefined | file |
+| Param | value                         | Type |
+| ----- | ----------------------------- | ---- |
+| video | 2s1SnyUsM/screen-capture.webm | file |
 
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
 
