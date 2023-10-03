@@ -8,7 +8,7 @@
     "start:prod": "set NODE_ENV=production&&nodemon server.js",
     "debug": "nodemon server.js"
   },
-  "author": "Mfoniso Ukpabio",
+  "author": "Bakare Abiola",
   "license": "ISC",
   "dependencies": {
     "@deepgram/sdk": "^2.4.0",
